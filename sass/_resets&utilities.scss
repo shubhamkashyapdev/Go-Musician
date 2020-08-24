@@ -1,0 +1,57 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: $roboto;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: $btn-clr;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+h2,p{
+  text-transform: uppercase;
+  line-height: 1.6em;
+}
+// animation for header links // 
+.links a::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
+  width: 100%;
+  background: $secondary-clr;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all .4s ease;
+}
+.links a:hover::before{
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+
+// utilities // 
+.button{
+  margin-top: 1em;
+  background: rgba(255,255,255,.3);
+  color: #000;
+  font-size: 1.2em;
+  outline: 2px solid $secondary-clr;
+  width: 12em;
+  padding: .5em 0;
+  transition: transform .3s ease;
+}
+.button:hover{
+  img{
+    transform: translateX(3px);
+  }
+}
+
